@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from dashboard.pages import countries, economics,  explorer, home
+from dashboard.pages import climate, countries, economics,  explorer, home
 
 st.set_page_config(
     page_title="Africa Data Intelligence",
@@ -40,6 +40,24 @@ def main() -> None:
         countries.render()
     elif page == "Economics":
         economics.render()
+    
+    page = st.sidebar.radio(
+        "Go to",
+        ["Home", "Dataset Explorer", "Countries", "Economics", "Climate", "ML Results"],
+    )
+
+    if page == "Home":
+        home.render()
+    elif page == "Dataset Explorer":
+        explorer.render()
+    elif page == "Countries":
+        countries.render()
+    elif page == "Economics":
+        economics.render()
+    elif page == "Climate":
+        climate.render()
+    elif page == "ML Results":
+        ml_results.render()
 
 if __name__ == "__main__":
     main()
