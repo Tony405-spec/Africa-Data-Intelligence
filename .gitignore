@@ -51,3 +51,21 @@ data/external/*
 # Logs
 *.log
 logs/
+
+# Python and data science artifacts
+.env.*
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.sav
